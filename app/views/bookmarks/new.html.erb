@@ -1,0 +1,9 @@
+<%# View Method for bookmark %>
+
+<h1>What is the comment you wish to leave</h1>
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.button :submit %>
+<% end %>
