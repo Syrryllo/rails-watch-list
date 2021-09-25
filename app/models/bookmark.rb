@@ -8,6 +8,7 @@ class Bookmark < ApplicationRecord
                 length: { minimum: 6 }, 
                 presence: true
 
-  validates :movie, uniqueness: {scope: :list}
+  validates :movie, uniqueness: {scope: :list, message: "already entered, choose another film"}
 
 end
+ 
